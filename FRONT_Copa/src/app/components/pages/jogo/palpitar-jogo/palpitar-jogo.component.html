@@ -1,0 +1,38 @@
+<mat-card class="container">
+  <mat-card-header>
+    <mat-card-title> Palpitar Jogo </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-form-field *ngIf="selecaoA!" class="input" id="selecaoA">
+      <mat-label for="selecaoA">Seleção A:</mat-label>
+      <input
+        disabled=""
+        matInput
+        type="text"
+        name="selecaoA"
+        [(ngModel)]="selecaoA.nome"
+      />
+    </mat-form-field>  
+    <mat-form-field id="placarSelecaoA" class="input">
+      <mat-label for="placarSelecaoA">Placar Seleção A: </mat-label>
+      <input matInput type="number" id="placarSelecaoA" [(ngModel)]="placarSelecaoA"/>
+    </mat-form-field>
+    <mat-form-field *ngIf="selecaoB!" class="input" id="selecaoB">
+      <mat-label for="selecaoB">Seleção B:</mat-label>
+      <input
+        disabled=""
+        matInput
+        type="text"
+        name="selecaoB"
+        [(ngModel)]="selecaoB.nome"
+      />
+    </mat-form-field>
+    <mat-form-field id="placarSelecaoB" class="input">
+      <mat-label for="placarSelecaoB">Placar Seleção B: </mat-label>
+      <input matInput type="number" id="placarSelecaoB" [(ngModel)]="placarSelecaoB"/>
+    </mat-form-field>
+    <div id="botao">
+      <button mat-raised-button color="primary" id="btnPalpitar" (click)="palpitar()">Cadastrar</button>
+    </div>
+  </mat-card-content>
+</mat-card>
